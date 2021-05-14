@@ -11,4 +11,4 @@ RUN chown -R mockoon mockoon-runner.sh
 USER mockoon
 
 ENTRYPOINT ["sh", "mockoon-runner.sh"]
-CMD docker run -d -p 3000:3000 registry.heroku.com/mva-mock-server/web -d https://raw.githubusercontent.com/mockoon/mock-samples/main/samples/generate-mock-data.json -i 0 -p 3000
+CMD docker run -d -p 3000:3000 mockoon/cli:latest -d https://raw.githubusercontent.com/mockoon/mock-samples/main/samples/generate-mock-data.json -i 0 -p 3000
