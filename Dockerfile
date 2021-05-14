@@ -3,7 +3,7 @@ FROM node:14-alpine
 ARG version=latest
 
 RUN npm install -g @mockoon/cli@$version
-RUN dir /var/lib/docker/tmp/
+RUN echo "hello world"
 COPY runner.sh mockoon-runner.sh
 
 # Do not run as root.
